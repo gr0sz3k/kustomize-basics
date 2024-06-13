@@ -8,6 +8,7 @@ patches:
 
 configMapGenerator:
 - name: backend-config-map
+  behavior: merge #or: replace
   env: config.properties
 
 images:
