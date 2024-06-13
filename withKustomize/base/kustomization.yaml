@@ -1,0 +1,25 @@
+resources: 
+- deployment.yaml
+- service.yaml
+
+commonLabels:
+  app: webapp
+
+commonAnnotations:
+  app: annontations123
+
+namePrefix:
+  epc-
+
+nameSuffix:
+  -v1
+
+configMapGenerator:
+- name: webapp-configmap
+  env: config.properties
+
+secretGenerator:
+- name: db-password
+  literals:
+  - username=user123
+  - password=password123

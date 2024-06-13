@@ -1,0 +1,12 @@
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: epc-webapp-configmap-v1
+  namespace: default
+  labels:
+    app: webapp
+  annotations:
+    app: annontations123
+data:
+  VARIABLE1: 'true'
+  VARIABLE2: 'xxx'

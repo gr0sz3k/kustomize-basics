@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: mycontainer
+        image: "docker-repo/webapp:latest"
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: backend-config-map
+        resources:
+          requests:
+            memory: "16Mi" 
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: epc-backend-service-v1
+  namespace: default
+  labels:
+    app: webapp
+  annotations:
+    app: annontations123
+spec:
+  selector:
+    app: webapp
+  ports:
+  - name: http
+    port: 8080
