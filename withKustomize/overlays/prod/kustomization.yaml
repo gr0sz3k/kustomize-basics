@@ -1,10 +1,10 @@
-bases:
+resources:
 - ../../base
 
 namespace: prod
 
 patches:
-- replicas.yaml
+- path: replicas.yaml
 
 configMapGenerator:
 - name: backend-config-map

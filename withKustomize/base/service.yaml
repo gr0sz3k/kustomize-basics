@@ -4,8 +4,6 @@ metadata:
   name: backend-service
   namespace: default
 spec:
-  selector:
-    app: webapp
   ports:
   - name: http
     port: 8080

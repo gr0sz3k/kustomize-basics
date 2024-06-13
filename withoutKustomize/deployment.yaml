@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: mycontainer
-        image: "docker-repo/webapp:latest"
+        image: "docker-repo/webapp:stable"
         ports:
         - containerPort: 80
         envFrom:

@@ -1,11 +1,15 @@
-bases:
+resources:
 - ../../base
 
 namespace: dev
 
 patches:
-- replicas.yaml
+- path: replicas.yaml
 
 configMapGenerator:
 - name: backend-config-map
   env: config.properties
+
+images:
+  - name: docker-repo/webapp
+    newTag: latest

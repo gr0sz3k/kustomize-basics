@@ -15,7 +15,7 @@ nameSuffix:
   -v1
 
 configMapGenerator:
-- name: webapp-configmap
+- name: backend-config-map
   env: config.properties
 
 secretGenerator:
@@ -23,3 +23,9 @@ secretGenerator:
   literals:
   - username=user123
   - password=password123
+  # files:
+  # - secretfile.txt
+  #keep your kustomization.yaml or secret files safe: SealedSecrets, Vault etc
+
+# generatorOptions:
+#   disableNameSuffixHash: true

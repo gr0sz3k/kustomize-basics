@@ -4,3 +4,7 @@ metadata:
   name: webapp-deployment
 spec:
   replicas: 2
+
+# patchesStrategicMerge
+# requires a duplicate structure of the kubernetes resource to identify the base resource that is being patched
+# followed by the modified portion of the spec to denote what gets changed (or deleted).
