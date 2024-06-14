@@ -12,5 +12,6 @@ configMapGenerator:
   env: config.properties
 
 images:
-  - name: docker-repo/webapp
-    newTag: latest
+- name: docker-repo/webapp
+  newTag: latest
+  #newName: docker-repo/webapp-new

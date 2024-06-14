@@ -1,4 +1,4 @@
-resources: 
+resources:
 - deployment.yaml
 - service.yaml
 
@@ -6,13 +6,11 @@ commonLabels:
   app: webapp
 
 commonAnnotations:
-  app: annontations123
+  key1: value1
 
-namePrefix:
-  epc-
+namePrefix: epc-
 
-nameSuffix:
-  -v1
+nameSuffix: -v1
 
 configMapGenerator:
 - name: backend-config-map
@@ -24,8 +22,8 @@ secretGenerator:
   - username=user123
   - password=password123
   # files:
-  # - secretfile.txt
-  #keep your kustomization.yaml or secret files safe: SealedSecrets, Vault etc
+# - secretfile.txt
+#keep your kustomization.yaml or secret files safe: SealedSecrets, Vault etc
 
 # generatorOptions:
 #   disableNameSuffixHash: true

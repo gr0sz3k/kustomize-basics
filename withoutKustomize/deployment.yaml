@@ -6,7 +6,7 @@ metadata:
   labels:
     app: webapp
   annotations:
-    app: annontations123
+    key1: value1
 spec:
   replicas: 1
   selector:

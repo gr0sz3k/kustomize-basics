@@ -6,7 +6,7 @@ metadata:
   labels:
     app: webapp
   annotations:
-    app: annontations123
+    key1: value1
 data:
   VARIABLE1: 'true'
   VARIABLE2: 'xxx'
